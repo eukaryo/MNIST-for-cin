@@ -32,7 +32,11 @@ for i = 1:60000
             end
         end
     end
-    fprintf(fileID,' -1\n');
+    if 1 <= count
+        fprintf(fileID,' 0 %d -1\n',count);
+    else
+        fprintf(fileID,' -1\n');
+    end
     if mod(i,100)==0
         disp(['cin',int2str(i)]);
     end
