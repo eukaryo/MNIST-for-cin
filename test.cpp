@@ -26,6 +26,13 @@ int main() {
 		cin >> a;
 		assert(a == -1);
 	}
+	
+	for (int i = 0; i < H; i++) {
+		for (int j = 0; j < W; j++) {
+			cout << (image[0][i*W + j] ? "#" : " ");
+		}
+		cout << endl;
+	}
 
 	return 0;
 }
