@@ -4,6 +4,9 @@
 using namespace std;
 
 int main() {
+	
+	FILE *fp_in;
+	freopen_s(&fp_in, "cin.txt", "r", stdin);
 
 	int N, H, W;
 	cin >> N >> H >> W;
@@ -26,6 +29,8 @@ int main() {
 		cin >> a;
 		assert(a == -1);
 	}
+	
+	fclose(fp_in);
 	
 	for (int i = 0; i < H; i++) {
 		for (int j = 0; j < W; j++) {
